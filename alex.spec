@@ -1,10 +1,10 @@
 Name:           alex
-Version:        2.0.1
-Release:        %mkrel 3
+Version:        2.1.0
+Release:        %mkrel 1
 License:        BSD-like
 Group:          Development/Other
 URL:            http://haskell.org/alex/
-Source:         http://haskell.org/alex/dist/%{version}/alex-%{version}-src.tar.gz
+Source:         http://haskell.org/alex/dist/%{version}/alex-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:  happy, ghc, docbook-style-xsl, libxslt-proc, libxml2, xmltex
 BuildRequires:  gmp-devel
@@ -19,32 +19,31 @@ expressions.  It is similar to the tool lex or flex for C/C++.
 %define debug_package %{nil}
 %define __spec_install_post /usr/lib/rpm/brp-compress
 
-%define alexdir %{_libdir}/%{name}-%{version}
+%define alexdir %{_datadir}/%{name}-%{version}
 
 %prep
 %setup -q
 
 %build
+runhaskell Setup.lhs configure --prefix=%{_prefix}
+runhaskell Setup.lhs build
+cd doc
 test -f configure || autoreconf
-./configure --prefix=%{_prefix} --libdir=%{_libdir}
-make
+./configure
 make html
 
 %install
 rm -rf ${RPM_BUILD_ROOT}
-make install prefix=${RPM_BUILD_ROOT}%{_prefix} libdir=${RPM_BUILD_ROOT}%{alexdir}
+
+runhaskell Setup.lhs copy --destdir=${RPM_BUILD_ROOT}
+
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
 
 %files
 %defattr(-,root,root)
-%doc alex/ANNOUNCE
-%doc alex/LICENSE
-%doc alex/README
-%doc alex/TODO
-%doc alex/doc/alex
-%doc alex/examples
+%doc ANNOUNCE  LICENSE  README  Setup.lhs  TODO examples
 %{_bindir}/alex*
 %{alexdir}
 

@@ -5,7 +5,6 @@ License:        BSD-like
 Group:          Development/Other
 URL:            http://haskell.org/alex/
 Source:         http://haskell.org/alex/dist/%{version}/alex-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:  happy, ghc, docbook-style-xsl, libxslt-proc, libxml2, xmltex
 BuildRequires:  gmp-devel
 Summary:        The lexer generator for Haskell

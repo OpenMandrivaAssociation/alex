@@ -1,6 +1,6 @@
 Name:           alex
 Version:        2.1.0
-Release:        %mkrel 1
+Release:        %mkrel 3
 License:        BSD-like
 Group:          Development/Other
 URL:            http://haskell.org/alex/

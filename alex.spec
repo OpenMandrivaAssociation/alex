@@ -1,14 +1,19 @@
-Name:           alex
-Version:        2.1.0
-Release:        %mkrel 3
-License:        BSD-like
-Group:          Development/Other
-URL:            http://haskell.org/alex/
-Source:         http://haskell.org/alex/dist/%{version}/alex-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-BuildRequires:  happy, ghc, docbook-style-xsl, libxslt-proc, libxml2, xmltex
-BuildRequires:  gmp-devel
-Summary:        The lexer generator for Haskell
+Name:		alex
+Summary:	The lexer generator for Haskell
+Version:	2.2
+Release:	%mkrel 1
+License:	BSD
+Group:		Development/Other
+URL:		http://haskell.org/alex/
+Source0:	http://haskell.org/alex/dist/%{version}/alex-%{version}.tar.gz
+BuildRoot:	%{_tmppath}/%{name}-%{version}-build
+BuildRequires:	happy
+BuildRequires:	ghc
+BuildRequires:	docbook-style-xsl
+BuildRequires:	libxslt-proc
+BuildRequires:	libxml2
+BuildRequires:	xmltex
+BuildRequires:	gmp-devel
 
 %description
 Alex is a tool for generating lexical analysers in Haskell, given a
@@ -33,13 +38,14 @@ test -f configure || autoreconf
 make html
 
 %install
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf %{buildroot}
 
-runhaskell Setup.lhs copy --destdir=${RPM_BUILD_ROOT}
+runhaskell Setup.lhs copy --destdir=%{buildroot}
 
+rm -rf %{buildroot}%{_docdir}/%{name}-%{version}
 
 %clean
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)

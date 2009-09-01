@@ -1,7 +1,7 @@
 Name:		alex
 Summary:	The lexer generator for Haskell
 Version:	2.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD
 Group:		Development/Other
 URL:		http://haskell.org/alex/

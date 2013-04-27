@@ -17,7 +17,7 @@ BuildRequires:	libxml2
 BuildRequires:	xmltex
 BuildRequires:	gmp-devel
 buildrequires:  haskell(QuickCheck)
-BuildRequires:  ghc, ghc-devel, haskell-macros, haddock
+BuildRequires:  ghc, ghc-devel, haskell-macros
 buildrequires:  xsltproc, dblatex
 
 %description

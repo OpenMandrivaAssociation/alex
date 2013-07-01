@@ -4,7 +4,7 @@
 Name:           %{module}
 Version:        3.0.2
 Release:        2
-Summary:        Alex is a tool for generating lexical analysers in Haskell
+Summary:        Tool for generating lexical analysers in Haskell
 Group:          Development/Other
 License:        BSD
 URL:            http://hackage.haskell.org/package/%{module}

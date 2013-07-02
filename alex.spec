@@ -3,7 +3,7 @@
 %define module alex
 Name:           %{module}
 Version:        3.0.2
-Release:        2
+Release:        3
 Summary:        Tool for generating lexical analysers in Haskell
 Group:          Development/Other
 License:        BSD
@@ -41,7 +41,6 @@ make html
 %_cabal_un
 
 %files
-%defattr(-,root,root)
 %{_bindir}/%{module}
 %{_docdir}/%{module}-%{version}
 %{_datadir}/%{module}-%{version}

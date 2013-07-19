@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   alex-3.0.2.tar.gz: d00d326e5c687773ae66fef744314179bd3b0c28
+sources:
+  alex-3.0.5.tar.gz: 648cee7e40816ad0bb9f7928dd15104ef181162a

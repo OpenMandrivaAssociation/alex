@@ -2,13 +2,13 @@
 %define _cabal_setup Setup.lhs
 %define module alex
 Name:           %{module}
-Version:        3.0.2
-Release:        3
+Version:        3.0.5
+Release:        1
 Summary:        Tool for generating lexical analysers in Haskell
 Group:          Development/Other
 License:        BSD
 URL:            http://hackage.haskell.org/package/%{module}
-Source0:        http://hackage.haskell.org/packages/archive/%{module}/%{version}/%{module}-%{version}.tar.gz
+Source0:        http://hackage.haskell.org/packages/archive/alex/3.0.5/%{name}-%{version}.tar.gz
 
 BuildRequires:	happy
 BuildRequires:	docbook-style-xsl
@@ -87,7 +87,7 @@ make html
 * Wed Jun 28 2006 Lenny Cartier <lenny@mandriva.com> 2.0.1-3mdv2007.0
 - rebuild
 
-* Thu Oct 06 2005 Nicolas Lécureuil <neoclust@mandriva.org> 2.0.1-2mdk
+* Thu Oct 06 2005 Nicolas LÃ©cureuil <neoclust@mandriva.org> 2.0.1-2mdk
 - Fix BuildRequires
 
 * Wed Jun 15 2005 Gaetan Lehmann <gaetan.lehmann@jouy.inra.fr> 2.0.1-1mdk
@@ -95,4 +95,5 @@ make html
 
 * Fri May 06 2005 Jens Petersen <petersen@redhat.com> - 2.0.1-1
 - initial packaging for Fedora Haskell based on upstream spec file
+
 

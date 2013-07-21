@@ -2,8 +2,8 @@
 %define _cabal_setup Setup.lhs
 %define module alex
 Name:           %{module}
-Version:        3.0.2
-Release:        3
+Version:        3.0.5
+Release:        1
 Summary:        Tool for generating lexical analysers in Haskell
 Group:          Development/Other
 License:        BSD

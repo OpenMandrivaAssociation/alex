@@ -3,7 +3,7 @@
 %define module alex
 Name:           %{module}
 Version:        3.0.5
-Release:        1
+Release:        2
 Summary:        Tool for generating lexical analysers in Haskell
 Group:          Development/Other
 License:        BSD
